@@ -161,11 +161,16 @@ input:-webkit-autofill:active {
   text-transform: uppercase;
   font-size: clamp(20px, 2.2vw, 48px);
   line-height: 1;
-
+  transition: all 0.3s;
   border-radius: 9000px;
   position: relative;
   z-index: 2;
   background: linear-gradient(180deg, #FFFF96 0.66%, #846A2D 100.66%);
+}
+
+.artist-badge:hover {
+  color: #090909;
+
 }
 
 .artist-badge::after {
@@ -178,8 +183,13 @@ input:-webkit-autofill:active {
   left: 50%;
   transform: translate(-50%, -50%);
   background: linear-gradient(180deg, #323232 0%, #090909 100%);
+  transition: all 0.3s;
   border-radius: 9000px;
 
+}
+
+.artist-badge:hover::after {
+  background: linear-gradient(180deg, #FFFF96 0.66%, #846A2D 100.66%);
 }
 
 .artist-badge:first-child {

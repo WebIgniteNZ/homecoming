@@ -23,7 +23,7 @@ const countries = [
   "Tonga",
   "	Other Country",
 ];
-const tickets_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "more"];
+const tickets_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, "10 or more"];
 export default function Page() {
   const [submitted, setSumbitted] = useState(false);
   const [country, setCountry] = useState();
@@ -100,9 +100,18 @@ export default function Page() {
                   alt="Artists: Maoli, Fiji, J Boog"
                 />
                 <div className="grid grid-cols-3 w-[110%] mx-auto z-10 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[20%] ">
-                  <div className="artist-badge">Maoli</div>
-                  <div className="artist-badge">figi</div>
-                  <div className="artist-badge">j boog</div>
+                  <a href="https://www.maolimusic.com" target="_blank" className="artist-badge">
+                    Maoli
+                  </a>
+                  <a
+                    href="https://www.instagram.com/f1j1/?hl=en"
+                    target="_blank"
+                    className="artist-badge">
+                    <span className="scale-110">fiji</span>
+                  </a>
+                  <a href="https://www.jboogmusic.net" target="_blank" className="artist-badge">
+                    j boog
+                  </a>
                 </div>
               </div>
               <h1 className="breathing text-[clamp(36px,4.4vw,88px)] pt-[7%] text-mustard gold-shadow-big relative">
