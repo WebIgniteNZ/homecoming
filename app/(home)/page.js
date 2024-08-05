@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Dropdown from "../../components/Dropdown";
+import { submitForm } from "../../utils/server-actions";
 const items = {
   Australia: {
     locations: ["Queensland", "New South Wales", "Western Australia", "Victoria"],
@@ -28,36 +29,46 @@ export default function Page() {
   const [submitted, setSumbitted] = useState(false);
   const [country, setCountry] = useState();
   const [tickets, setTickets] = useState();
+  const [error, setErrorMessage] = useState("");
   const addMergeField = async () => {
     await axios.get("/api/maichimp-add-merge-field");
   };
   const handleSubmit = async (e) => {
     const formData = new FormData(e.target);
+
     e.preventDefault();
     if (formData.get("check")) {
       console.log(formData.get("check"));
       return;
     }
-
-    await axios
-      .post("/api/arep-create", {
-        email: formData.get("emailr"),
-        fname: formData.get("fname"),
-        lname: formData.get("lname"),
-        tag: formData.get("invite")?.toLowerCase(),
-        country,
-        location,
-      })
-      .then((res) => {
-        if (res.status === 200) {
-          setSumbitted(true);
-          // localStorage.setItem("submitDate", new Date().toISOString());
-          console.log(res.data);
-        }
-        if (res.status === 500) {
-          alert("Whoops,something went wrong:(");
-        }
-      });
+    setErrorMessage("");
+    const submit = await submitForm(formData, country, tickets);
+    if (submit === true) {
+      setSumbitted(true);
+      return;
+    }
+    if (typeof submit === "string") {
+      setErrorMessage(submit);
+    }
+    // await axios
+    //   .post("/api/arep-create", {
+    //     email: formData.get("emailr"),
+    //     fname: formData.get("fname"),
+    //     lname: formData.get("lname"),
+    //     tag: formData.get("invite")?.toLowerCase(),
+    //     country,
+    //     location,
+    //   })
+    //   .then((res) => {
+    //     if (res.status === 200) {
+    //       setSumbitted(true);
+    //       // localStorage.setItem("submitDate", new Date().toISOString());
+    //       console.log(res.data);
+    //     }
+    //     if (res.status === 500) {
+    //       alert("Whoops,something went wrong:(");
+    //     }
+    //   });
   };
   useEffect(() => {
     if (window) {
@@ -158,25 +169,27 @@ export default function Page() {
 
                     <input
                       id="name"
-                      placeholder="First Name"
+                      placeholder="Name"
                       className="h-12 lg:h-16 bg-black/40  rounded-[10px]  w-full  px-3 xl:px-6 placeholder:uppercase placeholder:text-white text-mustard caret-mustard uppercase outline-none "
                       type="text"
-                      name="fname"
+                      name="name"
                       required
                     />
                     <input
-                      id="name"
-                      placeholder="Last name"
+                      id="phone"
+                      placeholder="Phone"
                       className="h-12 lg:h-16 bg-black/40  rounded-[10px]  w-full  px-3 xl:px-6 placeholder:uppercase placeholder:text-white text-mustard caret-mustard uppercase outline-none "
-                      type="text"
-                      name="lname"
+                      type="phone"
+                      name="phone"
                       required
                     />
                     <input
                       id="age"
                       placeholder="Age"
                       className=" h-12 lg:h-16 rounded-[10px]  bg-black/40 w-full  px-3 xl:px-6 placeholder:uppercase placeholder:text-white text-mustard caret-mustard uppercase outline-none "
-                      type="text"
+                      type="number"
+                      min={0}
+                      max={130}
                       name="age"
                     />
                     <Dropdown
@@ -216,11 +229,11 @@ export default function Page() {
                         </div>
                       ))}
                     </Dropdown>
-
+                    {error && <p className="text-center text-red-500">{error}</p>}
                     <button
                       type="submit"
                       disabled={submitted}
-                      className="bg-white text-center h-14  w-full  rounded-lg rounded-bl-lg text-black lg:text-40 px-3 xl:px-6  lg:px-8 flex-shrink-0 uppercase   transition-all hover:text-white hover:bg-pink ">
+                      className="bg-white text-center h-14  w-full  rounded-lg rounded-bl-lg text-black lg:text-40 px-3 xl:px-6  lg:px-8 flex-shrink-0 uppercase   transition-all hover:text-white hover:bg-mustard ">
                       <span className="relative top-0.5">
                         {submitted ? "Thank You for application" : "Pre-Register Now"}
                       </span>
