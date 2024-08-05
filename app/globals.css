@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Breathing";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Breathing"), url("/Breathing.ttf") format("truetype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.breathing {
+  font-family: "Breathing", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: "Germania One", system-ui;
+  position: relative;
+}
+
+.germania-one-regular {
+  font-family: "Germania One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-family: "Germania One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .wrapper {
+    @apply px-5 lg:px-10 xl:px-14 2xl:px-20;
+    width: 100%;
+
+    max-width: calc(109rem + (160rem / 16));
+    margin: 0 auto;
+  }
+}
+
+.font-impact {
+  font-family: "Impact", sans-serif;
+}
+
+.timer-box {
+  background: #ff0072;
+  box-shadow: -10px 10px 0px #00f2ff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  color: #ffdd00;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffdd00;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
+}
+
+.class-box {
+  @apply leading-none uppercase font-black;
+
+  box-shadow: -7px 7px 0px #7200ff;
+}
+
+.class {
+  @apply leading-none uppercase font-black;
+  font-size: 5rem;
+  color: #ff0072;
+  text-shadow: -4px 4px 0px #00f2ff;
+}
+
+.arep-form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.arep-input {
+  display: block;
+  width: 100%;
+}
+
+.arep-form-field-wrapper {
+  margin-bottom: 12px;
+}
+
+.arep-mobileNumber-input-wrap .arep-mobileNumber-code-input {
+  display: inline-block;
+  width: 100px;
+  margin-right: 6px;
+}
+
+.arep-mobileNumber-input-wrap .arep-mobileNumber-number-input {
+  display: inline-block;
+  width: calc(100% - 100px - 6px);
+}
+
+.win-text-shadow {
+  text-shadow: -2px 2px 0 black;
+}
+
+.gradient-bg {
+  background: linear-gradient(145deg, #000 35%, #f904c0 100%);
+}
+
+@media (min-width: 1024px) {
+  .class-box {
+    @apply leading-none uppercase font-black;
+    box-shadow: -24px 28px 0px #7200ff;
+  }
+
+  .class {
+    font-size: 10rem;
+    text-shadow: -12px 12px 0px #00f2ff;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(155deg, #141414 35%, #141414 100%);
+  }
+}
+
+.artist-text-stroke {
+  text-shadow: black 1px 0px 0px, black 0.540302px 0.841471px 0px,
+    black -0.416147px 0.909297px 0px, black -0.989992px 0.14112px 0px,
+    black -0.653644px -0.756802px 0px, black 0.283662px -0.958924px 0px,
+    black 0.96017px -0.279415px 0px;
+}
+
+.artist-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: clamp(10px, 1vw, 18px);
+  text-transform: uppercase;
+  font-size: clamp(20px, 2.2vw, 48px);
+  line-height: 1;
+
+  border-radius: 9000px;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg, #FFFF96 0.66%, #846A2D 100.66%);
+}
+
+.artist-badge::after {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(180deg, #323232 0%, #090909 100%);
+  border-radius: 9000px;
+
+}
+
+.artist-badge:first-child {
+  transform: translateX(15%);
+  z-index: 1;
+}
+
+.artist-badge:last-child {
+  transform: translateX(-10%);
+  z-index: 1;
+}
+
+.gold-shadow-big {
+  text-shadow: 0 0 35px #eabc50b7;
+
+}
+
+.white-shadow {
+  text-shadow: 0 0 15px #ffffffb7;
+
+}

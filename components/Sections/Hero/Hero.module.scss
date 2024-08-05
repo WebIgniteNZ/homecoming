@@ -1,0 +1,32 @@
+.section{
+    @apply  w-full flex justify-center  relative py-20;
+
+    
+    height: clamp(650px,60vh,1080px);
+    overflow:hidden;
+    position: relative;
+    @media (min-width:1024px){
+        @apply  items-center;
+        height: clamp(650px,100vh,1080px);
+    }
+}
+.countdown{
+ @apply flex flex-col items-center justify-center m-auto relative z-10;
+    h5{
+        font-size: 56px;
+        line-height: 1;
+    }
+ @media (min-width:1024px) {
+    h5{
+        font-size: 120px;
+        line-height: 1;
+     }
+ 
+    }
+    @media (min-width:1280px) {
+        h5{
+            font-size: 156px;
+            line-height: 1;
+         }
+     }
+}
