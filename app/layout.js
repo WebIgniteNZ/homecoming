@@ -3,8 +3,8 @@ import Image from "next/image";
 // import Script from "next/script";
 import "./globals.css";
 export const metadata = {
-  title: "Juicy Fest 25'",
-  description: "Get Ready for the new Juicy Fest 25'",
+  title: "Home Coming 25'",
+  description: "Get Ready for Home Coming 25'. 14-15 September. Republic of Fiji",
 };
 
 export default function RootLayout({ children }) {

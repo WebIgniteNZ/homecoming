@@ -28,7 +28,7 @@ export default function Dropdown({
 
       <div
         onClick={toggleDropdown}
-        className={`bg-mustard border border-white text-black z-10 rounded-[10px] absolute  w-full max-h-[220px] overflow-y-auto transition-all min-w-max top-full translate-y-1 ${
+        className={`bg-mustard border border-white text-black z-10 rounded-[10px] absolute  w-full max-h-[220px] overflow-y-auto transition-all min-w-max mas top-full translate-y-1 ${
           isOpen ? "" : "pointer-events-none opacity-0"
         }`}>
         {children}
