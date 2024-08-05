@@ -100,14 +100,14 @@ export default function Page() {
                   alt="Artists: Maoli, Fiji, J Boog"
                 />
                 <div className="grid grid-cols-3 w-[110%] mx-auto z-10 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[20%] ">
-                  <a href="https://www.maolimusic.com" target="_blank" className="artist-badge">
+                  <a href="https://www.maolimusic.com" target="_blank" className="artist-badge ">
                     Maoli
                   </a>
                   <a
                     href="https://www.instagram.com/f1j1/?hl=en"
                     target="_blank"
-                    className="artist-badge">
-                    <span className="scale-110">fiji</span>
+                    className="artist-badge fiji">
+                    <span className="">fiji</span>
                   </a>
                   <a href="https://www.jboogmusic.net" target="_blank" className="artist-badge">
                     j boog

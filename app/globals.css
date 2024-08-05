@@ -168,6 +168,11 @@ input:-webkit-autofill:active {
   background: linear-gradient(180deg, #FFFF96 0.66%, #846A2D 100.66%);
 }
 
+.artist-badge.fiji {
+  transform: scale(1.2);
+  letter-spacing: 1px;
+}
+
 .artist-badge:hover {
   color: #090909;
 
