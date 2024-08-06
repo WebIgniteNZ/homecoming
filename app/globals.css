@@ -120,7 +120,7 @@ input:-webkit-autofill:active {
 }
 
 .gradient-bg {
-  background: linear-gradient(145deg, #000 35%, #f904c0 100%);
+  background: linear-gradient(155deg, #141414 35%, #141414 100%);
 }
 
 @media (min-width: 1024px) {
