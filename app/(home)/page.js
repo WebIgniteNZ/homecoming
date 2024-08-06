@@ -242,7 +242,7 @@ export default function Page() {
                 ) : (
                   <p className="text-3xl lg:text-40 leading-none  tracking-[2%] text-center uppercase text-balance max-w-[710px] py-5 ">
                     You will be one of the first to receive updates and announcements for Home
-                    Coming &apos;25. 📢🎉
+                    Coming &apos;24. 📢🎉
                   </p>
                 )}
               </form>
