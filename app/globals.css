@@ -4,13 +4,13 @@
 
 
 @font-face {
-  font-family: "Breathing";
+  font-family: "Name Smile";
   font-style: normal;
   font-weight: normal;
-  src: local("Breathing"), url("/Breathing.ttf") format("truetype");
+  src: local("Name Smile"), url("/Name-Smile.otf") format("opentype");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap'); */
 
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -18,9 +18,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-.breathing {
-  font-family: "Breathing", sans-serif;
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -33,18 +31,13 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-  font-family: "Germania One", system-ui;
+  font-family: "Name Smile", system-ui;
   position: relative;
 }
 
-.germania-one-regular {
-  font-family: "Germania One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
 
 html {
-  font-family: "Germania One", system-ui;
+  font-family: "Name Smile", system-ui;
   font-weight: 400;
   font-style: normal;
 }
@@ -146,74 +139,28 @@ input:-webkit-autofill:active {
   }
 }
 
-.artist-text-stroke {
-  text-shadow: black 1px 0px 0px, black 0.540302px 0.841471px 0px,
-    black -0.416147px 0.909297px 0px, black -0.989992px 0.14112px 0px,
-    black -0.653644px -0.756802px 0px, black 0.283662px -0.958924px 0px,
-    black 0.96017px -0.279415px 0px;
-}
-
-.artist-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.poster {
+  @apply flex flex-col items-center;
+  max-width: 786px;
   width: 100%;
-  padding: clamp(10px, 1vw, 18px);
-  text-transform: uppercase;
-  font-size: clamp(20px, 2.2vw, 48px);
-  line-height: 1;
-  transition: all 0.3s;
-  border-radius: 9000px;
+  padding-bottom: 34%;
+
+
+}
+
+.poster>div {
   position: relative;
-  z-index: 2;
-  background: linear-gradient(180deg, #FFFF96 0.66%, #846A2D 100.66%);
+  width: 100%;
 }
 
-.artist-badge.fiji {
-  transform: scale(1.2);
-  letter-spacing: 1px;
+.poster img {
+  width: 100%;
 }
 
-.artist-badge:hover {
-  color: #090909;
-
-}
-
-.artist-badge::after {
-  z-index: -1;
+.poster .text {
+  width: 95%;
   position: absolute;
-  content: '';
-  width: calc(100% - 8px);
-  height: calc(100% - 8px);
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(180deg, #323232 0%, #090909 100%);
-  transition: all 0.3s;
-  border-radius: 9000px;
-
-}
-
-.artist-badge:hover::after {
-  background: linear-gradient(180deg, #FFFF96 0.66%, #846A2D 100.66%);
-}
-
-.artist-badge:first-child {
-  transform: translateX(15%);
-  z-index: 1;
-}
-
-.artist-badge:last-child {
-  transform: translateX(-10%);
-  z-index: 1;
-}
-
-.gold-shadow-big {
-  text-shadow: 0 0 35px #eabc50b7;
-
-}
-
-.white-shadow {
-  text-shadow: 0 0 15px #ffffffb7;
-
+  transform: translate(-50%, 45%);
 }

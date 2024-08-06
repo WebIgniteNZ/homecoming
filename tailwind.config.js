@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        germania: ["Germania One", "sans-serif"],
+        germania: ["Name Smile", "sans-serif"],
       },
       fontSize: {
         40: "2.5rem",
@@ -20,7 +20,7 @@ module.exports = {
         pink: "#FF0072",
         peach: "#EABC50",
         error: "#EE584D",
-        mustard: "#EABC50",
+        mustard: "#D5B175",
         purp: "#7200FF",
       },
       screens: {

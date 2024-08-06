@@ -6,14 +6,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Dropdown from "../../components/Dropdown";
 import { submitForm } from "../../utils/server-actions";
-const items = {
-  Australia: {
-    locations: ["Queensland", "New South Wales", "Western Australia", "Victoria"],
-  },
-  "New Zealand": {
-    locations: ["CHRISTCHURCH", "WELLINGTON", "TAURANGA", "AUCKLAND"],
-  },
-};
 
 const countries = [
   "Samoa",
@@ -81,61 +73,43 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="w-screen  lg:h-screen lg:overflow-hidden  relative p-5 lg:p-10 xl:p-20 ">
+    <div className="w-screen  lg:h-screen lg:overflow-hidden  relative p-5 ">
       {/* <Header /> */}
-      <div className="w-full h-full flex flex-col items-center border-2 border-mustard">
-        <div className="flex flex-col items-center gap-3 justify-center h-1/2 flex-grow  max-h-full w-full  relative px-5 xl:px-10">
-          <div className="flex flex-col lg:flex-row items-center w-full gap-5 xl:gap-10 xl:justify-evenly lg:max-h-svh  my-auto py-5  ">
-            <div className="flex flex-col items-center max-lg:h-1/4 flex-shrink relative pt-10">
-              <Image
-                className="pointer-events-none absolute top-[10%] left-1/2 object-contain -translate-x-1/2 -translate-y-1/4 w-[105%] max-w-[unset] "
-                loading="eager"
-                sizes="(min-width:1024px) 50vw,100vw"
-                fetchPriority="high"
-                priority
-                width={970}
-                height={476}
-                src={"/assets/flag.png"}
-                alt="pattern"
-              />
-              <div className="flex w-full lg:w-[75%] items-end relative">
-                <Image
-                  className="pointer-events-none relative "
-                  loading="eager"
-                  sizes="(min-width:1024px) 50vw,90vw"
-                  fetchPriority="high"
-                  priority
-                  width={900}
-                  height={534}
-                  src={"/assets/artists.png"}
-                  alt="Artists: Maoli, Fiji, J Boog"
-                />
-                <div className="grid grid-cols-3 w-[110%] mx-auto z-10 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[20%] ">
-                  <a href="https://www.maolimusic.com" target="_blank" className="artist-badge ">
-                    Maoli
-                  </a>
-                  <a
-                    href="https://www.instagram.com/f1j1/?hl=en"
-                    target="_blank"
-                    className="artist-badge fiji">
-                    <span className="">fiji</span>
-                  </a>
-                  <a href="https://www.jboogmusic.net" target="_blank" className="artist-badge">
-                    j boog
-                  </a>
+      <div className="w-full h-full flex flex-col items-center ">
+        <div className="flex flex-col items-center gap-3 justify-center h-1/2 flex-grow  max-h-full w-full  relative ">
+          <div className="flex flex-col lg:flex-row items-center w-full gap-5 xl:gap-10 xl:justify-evenly lg:max-h-svh  my-auto   ">
+            <div className="flex flex-col items-center max-lg:h-1/4 flex-shrink relative  w-full lg:w-[40%] max-w-[786px]">
+              <div className="poster">
+                <div className="artists">
+                  <Image
+                    className="pointer-events-none relative -translate-y-[5%] "
+                    loading="eager"
+                    sizes="(min-width:1024px) 50vw,90vw"
+                    fetchPriority="high"
+                    priority
+                    width={686}
+                    height={769}
+                    src={"/assets/artists.png"}
+                    alt="Artists: Maoli, Fiji, J Boog"
+                  />
+                  <div className="text">
+                    <Image
+                      className="pointer-events-none relative "
+                      loading="eager"
+                      sizes="(min-width:1024px) 50vw,90vw"
+                      fetchPriority="high"
+                      priority
+                      width={650}
+                      height={454}
+                      src={"/assets/text.png"}
+                      alt="Homecoming 24"
+                    />
+                  </div>
                 </div>
               </div>
-              <h1 className="breathing text-[clamp(36px,4.4vw,88px)] pt-[7%] text-mustard gold-shadow-big relative">
-                Home Coming
-                <span className="text-[clamp(12px,1.8vw,28px)] absolute left-0 bottom-0 translate-y-[90%] font-germania uppercase ">
-                  + MORE SPECIAL GUESTS TO BE ANNOUNCED
-                </span>
-              </h1>
-              <p className="text-[clamp(24px,2.2vw,50px)] uppercase leading-none pt-5 lg:pt-10 white-shadow">
-                14-15 September
-              </p>
-              <p className="text-[clamp(26px,2.2vw,54px)] uppercase leading-none white-shadow">
-                Republic of fiji
+
+              <p className="text-[clamp(12px,1.7vw,20px)] uppercase text-mustard leading-none ">
+                all ages event
               </p>
             </div>
             <motion.div
@@ -143,12 +117,12 @@ export default function Page() {
               transition={{ delay: 0.7 }}
               animate={{ opacity: 1 }}
               className="w-full lg:max-w-[560px] flex-grow">
-              <div className="w-full bg-mustard rounded-t-xl uppercase     lg:text-[clamp(20px,2vw,36px)] py-3  px-4 lg:py-5 flex justify-center items-center text-center  leading-none ">
+              <div className="w-full bg-mustard rounded-t-xl uppercase     lg:text-[clamp(12px,1.5vw,20px)] py-3  px-4 lg:py-5 flex justify-center items-center text-center  leading-none ">
                 Sign up for tickets and more info
               </div>
               <form
                 onSubmit={handleSubmit}
-                className="flex flex-col gap-3 lg:gap-4 bg-[#343434] p-4 xl:p-8 rounded-b-[10px]  w-full  mx-auto lg:text-3xl   text-xl  *:placeholder:text-white/75 relative z-20">
+                className="flex flex-col gap-3 lg:gap-4 bg-[#343434] p-4 xl:p-8 rounded-b-[10px]  w-full  mx-auto lg:text-[20px]   text-xs *:placeholder:text-white/75 relative z-20">
                 {!submitted ? (
                   <>
                     <input
@@ -233,7 +207,7 @@ export default function Page() {
                     <button
                       type="submit"
                       disabled={submitted}
-                      className="bg-white text-center h-14  w-full  rounded-lg rounded-bl-lg text-black lg:text-40 px-3 xl:px-6  lg:px-8 flex-shrink-0 uppercase   transition-all hover:text-white hover:bg-mustard ">
+                      className="bg-white text-center h-14  w-full  rounded-lg rounded-bl-lg text-black lg:text-[20px] px-3 xl:px-6  lg:px-8 flex-shrink-0 uppercase   transition-all hover:text-white hover:bg-mustard ">
                       <span className="relative top-0.5">
                         {submitted ? "Thank You for application" : "Pre-Register Now"}
                       </span>

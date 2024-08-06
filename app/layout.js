@@ -1,4 +1,5 @@
-// import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
 import Image from "next/image";
 // import Script from "next/script";
 import "./globals.css";
@@ -10,14 +11,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body>
         <div className="gradient-bg fixed z-[-1] w-full h-screen flex flex-col justify-end top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <Image
@@ -25,8 +18,44 @@ export default function RootLayout({ children }) {
             sizes="100vw"
             fill
             quality={75}
-            src={"/assets/bg.jpg"}
+            src={"/assets/bg-min.jpg"}
             alt="pattern"
+          />
+          <Image
+            className="pointer-events-none w-[20vw] bottom-0 right-0 absolute  object-contain "
+            sizes="10vw"
+            width={525}
+            height={431}
+            quality={75}
+            src={"/assets/lights-min.png"}
+            alt="lights"
+          />
+          <Image
+            className="pointer-events-none w-[20vw] bottom-0 right-left -scale-x-100 absolute  object-contain "
+            sizes="10vw"
+            width={525}
+            height={431}
+            quality={75}
+            src={"/assets/lights-min.png"}
+            alt="lights"
+          />
+          <Image
+            className="pointer-events-none w-[20vw] top-0 right-0 -scale-y-100 absolute  object-contain "
+            sizes="10vw"
+            width={525}
+            height={431}
+            quality={75}
+            src={"/assets/lights-min.png"}
+            alt="lights"
+          />
+          <Image
+            className="pointer-events-none w-[20vw] top-0 left-0 -scale-x-100 -scale-y-100 absolute  object-contain "
+            sizes="10vw"
+            width={525}
+            height={431}
+            quality={75}
+            src={"/assets/lights-min.png"}
+            alt="lights"
           />
         </div>
 
@@ -60,8 +89,9 @@ fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}');
 fbq('track', 'PageView');
 `,
           }}
-        />
-        <GoogleAnalytics gaId="G-KNVRMND448" /> */}
+        />*/}
+        <GoogleAnalytics gaId="G-Q1BNNE35GD" />
+        <Analytics />
       </body>
     </html>
   );
