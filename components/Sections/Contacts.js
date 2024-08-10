@@ -14,7 +14,7 @@ export default function Contacts() {
           </a>
         </div>
         <div className="flex flex-col items-center gap-2 p-5 xl:p-10 font-arial text-black bg-black/5">
-          <p className="uppercase arial-black font-black">General Enquires</p>
+          <p className="uppercase arial-black font-black">General ENQUIRIES</p>
           <a className="font-bold" href="mailto:support@homecomingfiji.com">
             support@homecomingfiji.com
           </a>
