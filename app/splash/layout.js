@@ -2,7 +2,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import Image from "next/image";
 // import Script from "next/script";
-import "./globals.css";
+import "../globals.css";
 export const metadata = {
   title: "Home Coming 24'",
   description: "Get Ready for Home Coming 24'. 14-15 September. Republic of Fiji",
