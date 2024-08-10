@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         germania: ["Name Smile", "sans-serif"],
+        arial: ["Arial", "sans-serif"],
       },
       fontSize: {
         40: "2.5rem",

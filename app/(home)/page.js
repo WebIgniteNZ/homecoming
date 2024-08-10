@@ -3,7 +3,10 @@ import axios from "axios";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Contacts from "../../components/Sections/Contacts";
 import HeroSection from "../../components/Sections/Hero/HeroSection";
+import Tickets from "../../components/Sections/Hero/Tickets";
+import ToPeople from "../../components/Sections/ToPeople";
 import { submitForm } from "../../utils/server-actions";
 
 const countries = [
@@ -53,16 +56,33 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="relative">
-      <HeroSection />
-      <Image
-        className="pointer-events-none object-cover  opacity-100  z-[-1] absolute w-full h-full"
-        sizes="100vw"
-        fill
-        quality={75}
-        src={"/assets/bg-min.jpg"}
-        alt="pattern"
-      />
-    </div>
+    <>
+      <div className="relative">
+        <HeroSection />
+        <ToPeople />
+        <Image
+          className="pointer-events-none object-cover  opacity-100  z-[-1] absolute w-full h-full hidden md:block"
+          sizes="100vw"
+          fill
+          quality={75}
+          src={"/assets/bg-min.jpg"}
+          alt="pattern"
+        />
+        <div className="bg bg-gradient-to-t from-[#0b0b0b] to-transparent h-1/2 absolute bottom-0 left-0 w-full z-0 hidden md:block"></div>
+      </div>
+      <div className="relative">
+        <Tickets />
+        <Contacts />
+        <Image
+          className="pointer-events-none object-cover  opacity-100  z-[-1] absolute w-full h-full"
+          sizes="100vw"
+          fill
+          quality={75}
+          src={"/assets/bg-min.jpg"}
+          alt="pattern"
+        />
+      </div>
+      {/* <Footer /> */}
+    </>
   );
 }

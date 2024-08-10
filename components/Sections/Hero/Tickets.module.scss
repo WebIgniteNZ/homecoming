@@ -1,0 +1,86 @@
+.wrapper {
+  @apply flex flex-col items-center gap-6;
+  padding-top: clamp(40px, 10%, 100px);
+  padding-bottom: clamp(40px, 10%, 100px);
+  max-width: 1840px;
+}
+.ticketsWrapper {
+  @apply w-full overflow-hidden;
+}
+.ticketsList {
+  @apply flex gap-5 overflow-x-auto max-lg:px-5 scroll-p-5 font-arial;
+  width: 100%;
+  scroll-snap-type: x proximity;
+  .ticket {
+    @apply text-black bg-white flex flex-col;
+
+    padding: 40px 0;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    width: 76vw;
+    max-width: 375px;
+    flex-shrink: 0;
+    &.vvip {
+      width: 77vw;
+      max-width: 510px;
+    }
+    &.under {
+      width: 56vw;
+      max-width: 300px;
+    }
+    h5 {
+      @apply pb-3 xl:pb-6;
+      font-family: "Arial Black", sans-serif;
+      text-align: center;
+      font-size: clamp(18px, 1.7vw, 24px);
+      font-weight: 900;
+    }
+    .price {
+      @apply flex justify-center items-center font-germania bg-pink text-white leading-none pt-4 py-3  xl:pt-7 xl:py-6;
+      font-size: clamp(28px, 3vw, 40px);
+    }
+    ul {
+      li {
+        @apply flex gap-4 items-center py-1.5 lg:py-3  2xl:py-5 text-sm lg:text-base;
+        p {
+          @apply leading-tight;
+        }
+        svg {
+          @apply text-pink;
+          flex-shrink: 0;
+        }
+        &:not(:last-child) {
+          @apply border-b-2 border-b-black/10;
+        }
+      }
+    }
+    a {
+      @apply flex justify-center items-center w-full bg-pink py-5 pt-6 font-germania text-white mt-auto;
+      font-size: clamp(18px, 2.5vw, 20px);
+    }
+  }
+}
+@media (min-width: 1280px) {
+  .ticketsList {
+    @apply gap-5 2xl:gap-10;
+    .ticket {
+      width: 100%;
+      flex: 1 1 calc(25% - 40px);
+
+      &.vvip {
+        flex: 1 1 calc(30% - 40px);
+        max-width: unset;
+      }
+      &.under {
+        min-width: 270px;
+        flex: 1 1 calc(17% - 40px);
+        max-width: unset;
+      }
+    }
+  }
+}
+@media (max-width: 1279px) {
+  .wrapper {
+    padding: clamp(80px, 10%, 100px) 0;
+  }
+}

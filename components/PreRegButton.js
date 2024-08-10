@@ -22,7 +22,7 @@ export default function PreRegButton({ children }) {
           onClick={openClick}
           className={`${
             children ? "w-full  mx-auto  flex-shrink-0 xl:text-2xl xl:px-8" : "w-max"
-          } p-4 rounded-md bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white`}>
+          } p-4  bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white`}>
           Buy Tickets
         </button>
       ) : (

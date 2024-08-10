@@ -1,5 +1,5 @@
 export const links = [
-  // { href: "/", label: "Home" },
+  { href: "#artists", label: "Artists" },
   // { href: "/line-up", label: "Line-up" },
   // { href: "/about", label: "About" },
   { href: "#tickets", label: "Tickets" },

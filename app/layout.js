@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
       <body className="gradient-bg min-h-dvh">
         <Header />
         <Image
-          className="pointer-events-none w-[20vw] top-0 right-0 -scale-y-100 absolute  object-contain "
-          sizes="10vw"
+          className="pointer-events-none w-1/2 lg:w-[20vw] top-0 right-0 -scale-y-100 absolute  object-contain "
+          sizes="20vw"
           width={525}
           height={431}
           quality={75}
@@ -24,8 +24,8 @@ export default function RootLayout({ children }) {
           alt="lights"
         />
         <Image
-          className="pointer-events-none w-[20vw] top-0 left-0 -scale-x-100 -scale-y-100 absolute  object-contain "
-          sizes="10vw"
+          className="pointer-events-none w-1/2 lg:w-[20vw] top-0 left-0 -scale-x-100 -scale-y-100 absolute  object-contain "
+          sizes="20vw"
           width={525}
           height={431}
           quality={75}

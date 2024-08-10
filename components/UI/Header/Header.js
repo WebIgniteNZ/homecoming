@@ -10,7 +10,7 @@ export default function Header() {
   const today = Date.now();
   const dayX = new Date(Date.UTC(2024, 4, 1, 3, 0, 0)).getTime();
   return (
-    <>
+    <nav className="max-lg:fixed top-0 left-0 z-20 w-full">
       <div className="wrapper  w-full pt-[clamp(20px,2.5%,60px)] z-20 relative">
         <div className="flex lg:h-16  lg:gap-14 justify-between lg:justify-center items-center  flex-shrink-0 uppercase  w-full">
           <div className="lg:hidden">
@@ -20,7 +20,9 @@ export default function Header() {
             onClick={() => {
               setOpen(!open);
             }}
-            className={`${styles.burger} ${open ? styles["is-open"] : ""} lg:hidden relative z-30`}>
+            className={`${styles.burger} ${
+              open ? styles["is-open"] : ""
+            } lg:hidden relative z-30  `}>
             <div className={styles["line-top"]}></div>
             <div className={styles["line-middle"]}></div>
             <div className={styles["line-bottom"]}></div>
@@ -62,6 +64,6 @@ export default function Header() {
           {/* <Socials /> */}
         </div>
       </div>
-    </>
+    </nav>
   );
 }

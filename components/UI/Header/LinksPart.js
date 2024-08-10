@@ -9,7 +9,7 @@ export default function LinksPart({ desktop = false, className = "", onClick }) 
 
   return (
     <>
-      {links.slice(desktop ? 0 : 0, links.length).map((link) => (
+      {links.slice(desktop ? 1 : 0, links.length).map((link) => (
         <li
           key={link.href}
           className={`${className} ${link.href.includes(handle) ? "text-pink" : ""}`}>
