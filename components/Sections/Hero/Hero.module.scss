@@ -1,32 +1,50 @@
-.section{
-    @apply  w-full flex justify-center  relative py-20;
-
-    
-    height: clamp(650px,60vh,1080px);
-    overflow:hidden;
-    position: relative;
-    @media (min-width:1024px){
-        @apply  items-center;
-        height: clamp(650px,100vh,1080px);
-    }
+.section {
+  @apply min-h-screen;
 }
-.countdown{
- @apply flex flex-col items-center justify-center m-auto relative z-10;
-    h5{
-        font-size: 56px;
-        line-height: 1;
+.hero {
+  @apply mx-auto w-full;
+  max-width: 1480px;
+  padding-top: 10%;
+}
+.artists {
+  @apply flex w-full;
+  > div {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    @apply w-full h-auto;
+    max-width: unset;
+    width: 150%;
+    object-fit: contain;
+  }
+  .josh {
+    position: relative;
+    z-index: 0;
+    img {
+      transform: translateX(12%);
     }
- @media (min-width:1024px) {
-    h5{
-        font-size: 120px;
-        line-height: 1;
-     }
- 
+  }
+  .jboog {
+    position: relative;
+    z-index: 1;
+    img {
+      width: 140%;
+      transform: translateX(5%);
     }
-    @media (min-width:1280px) {
-        h5{
-            font-size: 156px;
-            line-height: 1;
-         }
-     }
+  }
+  .fiji {
+    position: relative;
+    z-index: 0;
+    img {
+      transform: translateX(-5%);
+    }
+  }
+  .maoli {
+    position: relative;
+    z-index: 3;
+    img {
+      transform: translateX(-15%);
+    }
+  }
 }

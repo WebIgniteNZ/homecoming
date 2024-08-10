@@ -2,7 +2,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import Image from "next/image";
 // import Script from "next/script";
-import Header from "../components/UI/Header/Header";
 import "./globals.css";
 export const metadata = {
   title: "Home Coming 24'",
@@ -12,26 +11,53 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="gradient-bg min-h-dvh">
-        <Header />
-        <Image
-          className="pointer-events-none w-[20vw] top-0 right-0 -scale-y-100 absolute  object-contain "
-          sizes="10vw"
-          width={525}
-          height={431}
-          quality={75}
-          src={"/assets/lights-min.png"}
-          alt="lights"
-        />
-        <Image
-          className="pointer-events-none w-[20vw] top-0 left-0 -scale-x-100 -scale-y-100 absolute  object-contain "
-          sizes="10vw"
-          width={525}
-          height={431}
-          quality={75}
-          src={"/assets/lights-min.png"}
-          alt="lights"
-        />
+      <body>
+        <div className="gradient-bg fixed z-[-1] w-full h-screen flex flex-col justify-end top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <Image
+            className="pointer-events-none w-auto  object-cover  opacity-100  z-0 relative"
+            sizes="100vw"
+            fill
+            quality={75}
+            src={"/assets/bg-min.jpg"}
+            alt="pattern"
+          />
+          <Image
+            className="pointer-events-none w-[20vw] bottom-0 right-0 absolute  object-contain "
+            sizes="10vw"
+            width={525}
+            height={431}
+            quality={75}
+            src={"/assets/lights-min.png"}
+            alt="lights"
+          />
+          <Image
+            className="pointer-events-none w-[20vw] bottom-0 right-left -scale-x-100 absolute  object-contain "
+            sizes="10vw"
+            width={525}
+            height={431}
+            quality={75}
+            src={"/assets/lights-min.png"}
+            alt="lights"
+          />
+          <Image
+            className="pointer-events-none w-[20vw] top-0 right-0 -scale-y-100 absolute  object-contain "
+            sizes="10vw"
+            width={525}
+            height={431}
+            quality={75}
+            src={"/assets/lights-min.png"}
+            alt="lights"
+          />
+          <Image
+            className="pointer-events-none w-[20vw] top-0 left-0 -scale-x-100 -scale-y-100 absolute  object-contain "
+            sizes="10vw"
+            width={525}
+            height={431}
+            quality={75}
+            src={"/assets/lights-min.png"}
+            alt="lights"
+          />
+        </div>
 
         {children}
         {/* <Script

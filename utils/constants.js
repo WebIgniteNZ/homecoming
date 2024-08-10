@@ -1,12 +1,12 @@
 export const links = [
-  { href: "/", label: "Home" },
-  { href: "/line-up", label: "Line-up" },
-  { href: "/about", label: "About" },
-  { href: "/tickets/ga", label: "Tickets" },
-  { href: "/juicy-news", label: "Juicy News" },
-  { href: "/faq", label: "FAQs" },
-  { href: "/contact", label: "Contact" },
-  { href: "/sitemap", label: "Sitemap" },
+  // { href: "/", label: "Home" },
+  // { href: "/line-up", label: "Line-up" },
+  // { href: "/about", label: "About" },
+  { href: "#tickets", label: "Tickets" },
+  // { href: "/juicy-news", label: "Juicy News" },
+  // { href: "/faq", label: "FAQs" },
+  { href: "#contact", label: "Contact" },
+  //{ href: "/sitemap", label: "Sitemap" },
 ];
 
 export const ticket_links_nz = [

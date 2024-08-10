@@ -17,7 +17,7 @@ module.exports = {
         10: "10px",
       },
       colors: {
-        pink: "#FF0072",
+        pink: "#FF3A3C",
         peach: "#EABC50",
         error: "#EE584D",
         mustard: "#D5B175",

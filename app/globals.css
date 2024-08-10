@@ -120,7 +120,7 @@ input:-webkit-autofill:active {
 }
 
 .gradient-bg {
-  background: linear-gradient(155deg, #141414 35%, #141414 100%);
+  background: linear-gradient(155deg, #0b0b0b 35%, #0b0b0b 100%);
 }
 
 @media (min-width: 1024px) {
@@ -135,7 +135,7 @@ input:-webkit-autofill:active {
   }
 
   .gradient-bg {
-    background: linear-gradient(155deg, #141414 35%, #141414 100%);
+    background: linear-gradient(155deg, #0b0b0b 35%, #0b0b0b 100%);
   }
 }
 
@@ -143,7 +143,7 @@ input:-webkit-autofill:active {
   @apply flex flex-col items-center;
   max-width: 786px;
   width: 100%;
-  padding-bottom: 34%;
+  padding-bottom: 55%;
 
 
 }
@@ -158,9 +158,9 @@ input:-webkit-autofill:active {
 }
 
 .poster .text {
-  width: 95%;
+  width: 90%;
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 45%);
+  transform: translate(-50%, 60%);
 }
