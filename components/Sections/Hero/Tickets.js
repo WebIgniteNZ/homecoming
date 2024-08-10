@@ -21,7 +21,7 @@ const tickets = [
       </p>,
       <p key="6">Access to water refill stations.</p>,
     ],
-    link: "#",
+    link: process.env.NEXT_PUBLIC_LINK,
   },
   {
     id: "vip",
@@ -45,7 +45,7 @@ const tickets = [
       </p>,
       <p key="6">Access to merchandise vendors.</p>,
     ],
-    link: "#",
+    link: process.env.NEXT_PUBLIC_LINK,
   },
   {
     id: "vvip",
@@ -74,7 +74,7 @@ const tickets = [
         and <b>&apos;GA&apos;</b> as you wish
       </p>,
     ],
-    link: "#",
+    link: process.env.NEXT_PUBLIC_LINK,
   },
   {
     id: "under",
@@ -88,7 +88,7 @@ const tickets = [
       <p key="2">Access to water refill stations.</p>,
       <p key="3">Access to merchandise vendors.</p>,
     ],
-    link: "#",
+    link: process.env.NEXT_PUBLIC_LINK,
   },
 ];
 export default function Tickets() {

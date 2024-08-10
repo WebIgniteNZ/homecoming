@@ -19,7 +19,7 @@ export default function PreRegButton({ children }) {
     <>
       {dayX < today ? (
         <a
-          href="#"
+          href={process.env.NEXT_PUBLIC_LINK}
           // onClick={openClick}
           className={`${
             children ? "w-full  mx-auto  flex-shrink-0 xl:text-2xl xl:px-8" : "w-max"

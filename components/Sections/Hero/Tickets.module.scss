@@ -55,7 +55,7 @@
       }
     }
     a {
-      @apply flex justify-center items-center w-full bg-pink py-5 pt-6 font-germania text-white mt-auto;
+      @apply flex justify-center items-center w-full bg-pink py-5 pt-6 font-germania text-white mt-auto transition-all hover:text-pink hover:bg-white;
       font-size: clamp(18px, 2.5vw, 20px);
     }
   }
