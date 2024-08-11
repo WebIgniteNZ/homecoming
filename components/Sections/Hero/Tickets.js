@@ -10,7 +10,7 @@ const tickets = [
         Entry into <b>HOME COMING</b>, via the <b>&apos;GA&apos; </b>Entry Lanes.
       </p>,
       <p key="2">
-        Admission to the <b>&apos;GA&apos;</b> (General Admission) area of <b>HOME COMING</b> 2025.
+        Admission to the <b>&apos;GA&apos;</b> (General Admission) area of <b>HOME COMING</b> 2024.
       </p>,
       <p key="3">Access to food and merchandise vendors.</p>,
       <p key="4">
@@ -32,7 +32,7 @@ const tickets = [
         Front of stage viewing from our limited <b>&apos;VIP&apos;</b> Section.
       </p>,
       <p key="2">
-        Entry into <b> HOME COMING</b> 2025, via your own dedicated <b>&apos;VIP&apos;</b> Entry
+        Entry into <b> HOME COMING</b> 2024, via your own dedicated <b>&apos;VIP&apos;</b> Entry
         Lanes.
       </p>,
       <p key="3">
@@ -53,7 +53,7 @@ const tickets = [
     price: 999,
     inclusives: [
       <p key="1">
-        Priority entry into <b>HOME COMING</b> 2025, via your own dedicated Entry Lanes.
+        Priority entry into <b>HOME COMING</b> 2024, via your own dedicated Entry Lanes.
       </p>,
       <p key="2">
         Full access to HOME COMING <b>&apos;VVIP&apos;</b> Section.
@@ -70,7 +70,7 @@ const tickets = [
       <p key="6">Access to complimentary water and water refill stations.</p>,
       <p key="5">
         Flexibility - with a <b>&apos;VVIP&apos;</b> ticket you have full admission to HOME COMING
-        2025&apos;s festival grounds to move between <b>&apos;VVIP&apos;</b>, <b>&apos;VIP&apos;</b>{" "}
+        2024&apos;s festival grounds to move between <b>&apos;VVIP&apos;</b>, <b>&apos;VIP&apos;</b>{" "}
         and <b>&apos;GA&apos;</b> as you wish
       </p>,
     ],

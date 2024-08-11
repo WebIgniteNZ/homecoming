@@ -57,7 +57,7 @@ export default function Header() {
             </Link>
           ) : (
             <a
-              href={"https://arep.co/p/juicyfest-2025-1"}
+              href={"https://arep.co/p/juicyfest-2024-1"}
               className="w-max p-4 rounded-md bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white">
               pre-reg
             </a>
