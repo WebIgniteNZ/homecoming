@@ -1,66 +1,126 @@
-import akon from "@/assets/akon-hero.png";
-import bg from "@/assets/back.jpg";
-import corner from "@/assets/corner.png";
-import tpain from "@/assets/t-pain-hero.png";
 import Image from "next/image";
-import Timer from "../../Timer";
-import SectionHeading from "../../UI/SectionHeading";
 import styles from "./Hero.module.scss";
 export default function HeroSection() {
   return (
     <section className={styles.section}>
-      <div className={`wrapper ${styles.wrapper}`}>
-        <div className={styles.countdown}>
-          <div className="relative translate-y-[15%]">
-            <SectionHeading>May 3th 2024</SectionHeading>
+      <div id="artists" className={`wrapper ${styles.hero}`}>
+        <Image
+          className={styles.flag}
+          width={685}
+          height={602}
+          src="/assets/artists/flag.png"
+          alt="Fiji Flag"
+        />
+        <div className={styles.artists}>
+          <div className={styles.josh}>
+            <Image
+              className={styles.artistImg}
+              width={540}
+              height={450}
+              src="/assets/artists/josh.png"
+              alt="Josh"
+            />
+            <a
+              target="_blank"
+              href="https://www.instagram.com/joshtatofimusic/"
+              className={styles.name}>
+              <Image width={279} height={103} src="/assets/artists/josh-name.png" alt="Josh " />
+            </a>
           </div>
-          <div className="relative bg-mustard border-[6px] border-purp rounded-xl w-full max-w-[632px] justify-center items-center flex p-4 pb-0 class-box  ">
-            <Timer />
+          <div className={styles.jboog}>
+            <Image
+              className={styles.artistImg}
+              width={540}
+              height={450}
+              src="/assets/artists/jboog.png"
+              alt="Artists"
+            />
+            <a
+              target="_blank"
+              href="https://www.instagram.com/jboogmusic/?hl=en"
+              className={styles.name}>
+              <Image width={306} height={112} src="/assets/artists/jboog-name.png" alt="JBoog " />
+            </a>
           </div>
-          <p className="xl:text-[40px] pt-10 max-w-[620px] text-center uppercase leading-none darma-e ">
-            OMAR APOLLO - PINKPANTHERESS - DOM KENNEDY & <br /> TEefliI - JOJO - UMI - MAETA - naOMI
-            SHARON <br />- RAAHiiM - LEKAN - AMINDi
-          </p>
+          <div className={styles.fiji}>
+            <Image
+              className={styles.artistImg}
+              width={540}
+              height={450}
+              src="/assets/artists/fiji.png"
+              alt="Artists"
+            />
+            <a target="_blank" href="https://www.instagram.com/f1j1/?hl=en" className={styles.name}>
+              <Image width={161} height={58} src="/assets/artists/fiji-name.png" alt="Fiji " />
+            </a>
+          </div>
+          <div className={styles.maoli}>
+            <Image
+              className={styles.artistImg}
+              width={540}
+              height={450}
+              src="/assets/artists/maoli.png"
+              alt="Artists"
+            />
+            <a
+              target="_blank"
+              href="https://www.instagram.com/maolimusic/?hl=en"
+              className={styles.name}>
+              <Image width={210} height={78} src="/assets/artists/maoli-name.png" alt="Maoli " />
+            </a>
+          </div>
+        </div>
+        <div className={styles.dates}>
+          <Image
+            className={styles.date}
+            width={332}
+            height={72}
+            src="/assets/hero/14-15.png"
+            alt="14-15 September "
+          />
+          <Image
+            className={styles.title}
+            width={427}
+            height={182}
+            src="/assets/hero/title.png"
+            alt="HOMECOMING FEST "
+          />
+          <Image
+            className={styles.venue}
+            width={349}
+            height={58}
+            src="/assets/hero/king-charles.png"
+            alt="14-15 September "
+          />
         </div>
       </div>
-      <div className="-z-[1] w-full h-full absolute top-0 left-0">
+      <div className={`wrapper ${styles.heroMob} relative`}>
         <Image
-          className="pointer-events-none object-cover"
-          loading="eager"
-          priority
+          style={{ position: "relative", transform: "translateY(5%)" }}
+          className={styles.aritstsMob}
+          width={563}
+          height={533}
+          src="/assets/artists-mob.png"
+          alt="Artists"
+        />{" "}
+        <Image
+          style={{ position: "relative", transform: "translateY(-20%)", zIndex: 2 }}
+          className={styles.venueMob}
+          width={557}
+          height={562}
+          src="/assets/text-mob.png"
+          alt="14-15 September,King Charles Park "
+        />
+        <Image
+          className="pointer-events-none object-cover  opacity-100  z-[-1] absolute w-full h-full md:hidden "
+          sizes="100vw"
           fill
-          src={bg}
+          quality={75}
+          src={"/assets/bg-min.jpg"}
           alt="pattern"
         />
+        <div className="bg bg-gradient-to-t from-[#0b0b0b] to-transparent h-1/2 absolute bottom-0 left-0 w-full z-0 md:hidden "></div>
       </div>
-      <Image
-        width={corner.width}
-        height={corner.height}
-        className="pointer-events-none absolute bottom-0 right-0 rotate-180 -scale-x-100 max-lg:w-20 w-20 "
-        src={corner}
-        alt="pattern"
-      />
-      <Image
-        width={corner.width}
-        height={corner.height}
-        className="pointer-events-none absolute bottom-0 left-0 rotate-180 max-lg:w-20 w-20 "
-        src={corner}
-        alt="pattern"
-      />
-      <Image
-        width={tpain.width}
-        height={tpain.height}
-        className="z-0 pointer-events-none absolute bottom-0 left-0 w-auto max-h-[40%] lg:max-h-[90%] object-contain max-2xl:-translate-x-1/4"
-        src={tpain}
-        alt="pattern"
-      />
-      <Image
-        width={akon.width}
-        height={akon.height}
-        className="z-0 pointer-events-none absolute bottom-0 right-0 w-auto max-h-[40%] lg:max-h-[90%] object-contain max-2xl:translate-x-1/3 "
-        src={akon}
-        alt="pattern"
-      />
     </section>
   );
 }

@@ -35,3 +35,19 @@ export const submitForm = async (formData, country, tickets) => {
   }
   return false;
 };
+export const retrieveCSV = async () => {
+  try {
+    const { data, error } = await supabase.from("Audience").select().csv();
+    console.log("YO");
+    if (error && error.message) {
+      return error.code === "23505" ? "You're already subscribed" : error.message;
+    }
+    if (data) {
+      console.log("data");
+      return data;
+    }
+  } catch (err) {
+    console.log(err);
+  }
+  return false;
+};

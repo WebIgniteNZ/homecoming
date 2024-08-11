@@ -58,7 +58,7 @@ export default function PreRegForm({ isPopup = false, afterSubmit = () => {} }) 
   return (
     <>
       <div className="w-full bg-pink rounded-t-xl darma-e uppercase font-bold text-xl lg:text-[30px] py-2  px-3 lg:py-3 flex justify-center items-center text-center win-text-shadow leading-none ">
-        Win 2 vip tickets for juicyfest 2025!
+        Win 2 vip tickets for juicyfest 2024!
       </div>
       <form
         onSubmit={handleSubmit}

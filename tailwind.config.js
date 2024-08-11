@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         germania: ["Name Smile", "sans-serif"],
+        arial: ["Arial", "sans-serif"],
       },
       fontSize: {
         40: "2.5rem",
@@ -17,7 +18,7 @@ module.exports = {
         10: "10px",
       },
       colors: {
-        pink: "#FF0072",
+        pink: "#FF3A3C",
         peach: "#EABC50",
         error: "#EE584D",
         mustard: "#D5B175",

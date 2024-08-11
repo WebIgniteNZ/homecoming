@@ -18,17 +18,18 @@ export default function PreRegButton({ children }) {
   return (
     <>
       {dayX < today ? (
-        <button
-          onClick={openClick}
+        <a
+          href={process.env.NEXT_PUBLIC_LINK}
+          // onClick={openClick}
           className={`${
             children ? "w-full  mx-auto  flex-shrink-0 xl:text-2xl xl:px-8" : "w-max"
-          } p-4 rounded-md bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white`}>
+          } p-4  bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white`}>
           Buy Tickets
-        </button>
+        </a>
       ) : (
         children ?? (
           <a
-            href={"https://arep.co/p/juicyfest-2025-1"}
+            href={"https://arep.co/p/juicyfest-2024-1"}
             className="w-max p-4 rounded-md bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white">
             pre-reg
           </a>
