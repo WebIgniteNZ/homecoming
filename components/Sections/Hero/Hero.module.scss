@@ -102,6 +102,12 @@
 }
 @media (min-width: 1280px) {
   .section {
+    height: max-content;
+    max-height: 800px;
+  }
+}
+@media (min-width: 1440px) {
+  .section {
     height: 80vh;
     max-height: 800px;
   }

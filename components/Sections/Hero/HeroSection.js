@@ -71,13 +71,19 @@ export default function HeroSection() {
           </div>
         </div>
         <div className={styles.dates}>
-          <Image
+          <div className={`${styles.date} flex flex-col items-center`}>
+            <p className="text-mustard text-[clamp(24px,2.4vw,30px)] leading-none">
+              14-15 Sep 2024
+            </p>
+            <p className="text-[clamp(18px,2vw,27px)] leading-none">republic of fiji</p>
+          </div>
+          {/* <Image
             className={styles.date}
             width={332}
             height={72}
             src="/assets/hero/14-15.png"
             alt="14-15 September "
-          />
+          /> */}
           <Image
             className={styles.title}
             width={427}
@@ -111,6 +117,9 @@ export default function HeroSection() {
           src="/assets/text-mob.png"
           alt="14-15 September,King Charles Park "
         />
+        <p className="text-mustard text-center text-[clamp(24px,7vw,40px)] absolute top-[90%] left-1/2 -translate-x-1/2 z-10">
+          2024
+        </p>
         <Image
           className="pointer-events-none object-cover  opacity-100  z-[-1] absolute w-full h-full md:hidden "
           sizes="100vw"
