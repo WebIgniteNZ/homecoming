@@ -1,13 +1,11 @@
 "use client";
-import axios from "axios";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Contacts from "../../components/Sections/Contacts";
 import HeroSection from "../../components/Sections/Hero/HeroSection";
 import Tickets from "../../components/Sections/Hero/Tickets";
 import ToPeople from "../../components/Sections/ToPeople";
-import { submitForm } from "../../utils/server-actions";
+import { calculateTimeLeft } from "../../utils/helpers";
 
 const countries = [
   "Samoa",
@@ -20,65 +18,53 @@ const countries = [
 ];
 const tickets_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, "10 or more"];
 export default function Page() {
-  const [submitted, setSumbitted] = useState(false);
-  const [country, setCountry] = useState();
-  const [tickets, setTickets] = useState();
-  const [error, setErrorMessage] = useState("");
-  const addMergeField = async () => {
-    await axios.get("/api/maichimp-add-merge-field");
-  };
-  const handleSubmit = async (e) => {
-    const formData = new FormData(e.target);
+  const targetDate = Date.UTC(2024, 7, 12, 7, 0, 0);
+  const showBuyTickets = Date.now() >= targetDate;
+  const timeLeft = calculateTimeLeft(targetDate);
 
-    e.preventDefault();
-    if (formData.get("check")) {
-      console.log(formData.get("check"));
-      return;
-    }
-    setErrorMessage("");
-    const submit = await submitForm(formData, country, tickets);
-    if (submit === true) {
-      setSumbitted(true);
-      return;
-    }
-    if (typeof submit === "string") {
-      setErrorMessage(submit);
-    }
-  };
-  useEffect(() => {
-    if (window) {
-      const submitDate = localStorage?.getItem("submitDate");
-      const today = new Date();
-      const twentyFourHoursInMilliseconds = 1000 * 60 * 60 * 24;
-      const is24HoursPassed = today >= submitDate + twentyFourHoursInMilliseconds;
-      setSumbitted(!is24HoursPassed);
-    }
-  }, []);
-
+  console.log(timeLeft);
   return (
     <>
       <div className="relative">
         <HeroSection />
         <div className="wrapper flex max-md:flex-col justify-center items-center mx-auto relative z-10">
-          <div className="flex gap-2">
+          <div className="flex gap-4 items-center">
             <p className="text-[clamp(18px,1.6vw,24px)] text-right leading-none">
-              Gates Open:
-              <br />
-              Time:
+              {showBuyTickets ? (
+                <>
+                  Gates Open:
+                  <br />
+                  Time:
+                </>
+              ) : (
+                "tickets on sale"
+              )}
             </p>
             <p className="text-[clamp(18px,1.6vw,24px)] text-left leading-none text-mustard ">
-              2:30pm
-              <br />
-              3PM - 10PM
+              {showBuyTickets ? (
+                <>
+                  2:30pm
+                  <br />
+                  3PM - 10PM
+                </>
+              ) : (
+                "12th august 7pm"
+              )}
             </p>
           </div>
-          <div className="w-2/3 h-0.5 md:h-14 md:w-0.5 flex-shrink-0 max-md:my-5 md:mx-10 bg-white/50"></div>
-          <a
-            href={process.env.NEXT_PUBLIC_LINK}
-            // onClick={openClick}
-            className={` p-4  bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white`}>
-            Buy Tickets
-          </a>
+          {showBuyTickets ? (
+            <>
+              <div className="w-2/3 h-0.5 md:h-14 md:w-0.5 flex-shrink-0 max-md:my-5 md:mx-10 bg-white/50"></div>
+              <a
+                href={process.env.NEXT_PUBLIC_LINK}
+                // onClick={openClick}
+                className={` p-4  bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white`}>
+                Buy Tickets
+              </a>
+            </>
+          ) : (
+            <></>
+          )}
         </div>
         <ToPeople />
 

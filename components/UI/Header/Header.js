@@ -7,8 +7,9 @@ import styles from "./Header.module.scss";
 import LinksPart from "./LinksPart";
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const today = Date.now();
-  const dayX = new Date(Date.UTC(2024, 4, 1, 3, 0, 0)).getTime();
+  const targetDate = Date.UTC(2024, 7, 12, 7, 0, 0);
+  const showBuyTickets = Date.now() >= targetDate;
+
   return (
     <nav className="max-lg:fixed top-0 left-0 z-20 w-full">
       <div className="wrapper  w-full pt-[clamp(20px,2.5%,60px)] z-20 relative">
@@ -35,7 +36,7 @@ export default function Header() {
           </div> */}
           <div className="lg:flex gap-2 lg:gap-5 xl:gap-10  items-center hidden">
             {/* <Socials /> */}
-            <PreRegButton />
+            {showBuyTickets && <PreRegButton />}
           </div>
         </div>
         <div

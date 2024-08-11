@@ -92,6 +92,8 @@ const tickets = [
   },
 ];
 export default function Tickets() {
+  const targetDate = Date.UTC(2024, 7, 12, 7, 0, 0);
+  const showBuyTickets = Date.now() >= targetDate;
   return (
     <div className={`${styles.wrapper} wrapper`}>
       <h3 className="text-2xl lg:text-40 xl:text-6xl">TICKET OPTIONS</h3>
@@ -109,7 +111,7 @@ export default function Tickets() {
                     </li>
                   ))}
                 </ul>
-                <a href={ticket.link}>buy tickets</a>
+                {showBuyTickets && <a href={ticket.link}>buy tickets</a>}
               </div>
             </div>
           ))}
