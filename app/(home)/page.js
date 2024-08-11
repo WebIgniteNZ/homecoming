@@ -62,7 +62,7 @@ export default function Page() {
         <div className="wrapper flex max-md:flex-col justify-center items-center mx-auto relative z-10">
           <div className="flex gap-2">
             <p className="text-[clamp(18px,1.6vw,24px)] text-right leading-none">
-              Gate Open:
+              Gates Open:
               <br />
               Time:
             </p>
