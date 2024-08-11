@@ -3,15 +3,17 @@ import Image from "next/image";
 export default function ToPeople() {
   return (
     <div className="wrapper grid lg:grid-cols-[1.2fr,1.8fr] gap-5 xl:gap-10 pt-10 xl:pt-20 place-content-center place-items-center relative z-[2]">
-      <div className="w-full  relative h-max max-lg:order-1">
-        <Image
-          className="object-contain"
-          width={588}
-          height={505}
-          src="/assets/artists/fiji-2.png"
-          alt="Fiji - George Veikoso"
-        />
-        <div className="absolute top-[85%] left-1/2 -translate-x-1/2 text-[clamp(14px,1.5vw,16px)] text-black bg-slate-400 rounded-xl text-center leading-none pt-2.5 px-4 pb-2">
+      <div className="w-full  relative h-max max-lg:order-1 flex flex-col gap-3 items-center">
+        <div className="w-full pb-[100%] rounded-full overflow-hidden relative">
+          <Image
+            className="object-cover absolute top-0 left-0 "
+            width={588}
+            height={505}
+            src="/assets/artists/fiji-2.jpeg"
+            alt="Fiji - George Veikoso"
+          />
+        </div>
+        <div className=" text-[clamp(14px,1.5vw,16px)] text-black bg-slate-400 rounded-xl text-center leading-none pt-2.5 px-4 pb-2">
           George Veikoso
         </div>
       </div>

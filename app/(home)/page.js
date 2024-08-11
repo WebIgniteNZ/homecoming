@@ -59,7 +59,29 @@ export default function Page() {
     <>
       <div className="relative">
         <HeroSection />
+        <div className="wrapper flex max-md:flex-col justify-center items-center mx-auto relative z-10">
+          <div className="flex gap-2">
+            <p className="text-[clamp(18px,1.6vw,24px)] text-right leading-none">
+              Gate Open:
+              <br />
+              Time:
+            </p>
+            <p className="text-[clamp(18px,1.6vw,24px)] text-left leading-none text-mustard ">
+              2:30pm
+              <br />
+              3PM - 10PM
+            </p>
+          </div>
+          <div className="w-2/3 h-0.5 md:h-14 md:w-0.5 flex-shrink-0 max-md:my-5 md:mx-10 bg-white/50"></div>
+          <a
+            href={process.env.NEXT_PUBLIC_LINK}
+            // onClick={openClick}
+            className={` p-4  bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white`}>
+            Buy Tickets
+          </a>
+        </div>
         <ToPeople />
+
         <Image
           className="pointer-events-none object-cover  opacity-100  z-[-1] absolute w-full h-full hidden md:block"
           sizes="100vw"

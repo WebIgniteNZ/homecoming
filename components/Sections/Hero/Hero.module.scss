@@ -33,7 +33,10 @@
     justify-content: center;
   }
   .name {
-    @apply absolute w-2/3 h-auto top-full left-1/2 -translate-x-1/2 -translate-y-1/2;
+    @apply absolute w-2/3 h-auto top-full left-1/2 -translate-x-1/2 -translate-y-1/2  z-10 transition-all;
+    &:hover {
+      scale: 1.1;
+    }
   }
   .artistImg {
     @apply w-full h-auto;
@@ -92,7 +95,14 @@
 }
 @media (min-width: 1024px) {
   .section {
-    height: 80vh;
+    padding-bottom: 20px;
+    height: max-content;
     max-height: 900px;
+  }
+}
+@media (min-width: 1280px) {
+  .section {
+    height: 80vh;
+    max-height: 800px;
   }
 }

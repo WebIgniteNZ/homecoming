@@ -20,13 +20,12 @@ export default function HeroSection() {
               src="/assets/artists/josh.png"
               alt="Josh"
             />
-            <Image
-              className={styles.name}
-              width={279}
-              height={103}
-              src="/assets/artists/josh-name.png"
-              alt="Josh "
-            />
+            <a
+              target="_blank"
+              href="https://www.instagram.com/joshtatofimusic/"
+              className={styles.name}>
+              <Image width={279} height={103} src="/assets/artists/josh-name.png" alt="Josh " />
+            </a>
           </div>
           <div className={styles.jboog}>
             <Image
@@ -36,13 +35,12 @@ export default function HeroSection() {
               src="/assets/artists/jboog.png"
               alt="Artists"
             />
-            <Image
-              className={styles.name}
-              width={306}
-              height={112}
-              src="/assets/artists/jboog-name.png"
-              alt="JBoog "
-            />
+            <a
+              target="_blank"
+              href="https://www.instagram.com/jboogmusic/?hl=en"
+              className={styles.name}>
+              <Image width={306} height={112} src="/assets/artists/jboog-name.png" alt="JBoog " />
+            </a>
           </div>
           <div className={styles.fiji}>
             <Image
@@ -52,13 +50,9 @@ export default function HeroSection() {
               src="/assets/artists/fiji.png"
               alt="Artists"
             />
-            <Image
-              className={styles.name}
-              width={161}
-              height={58}
-              src="/assets/artists/fiji-name.png"
-              alt="Fiji "
-            />
+            <a target="_blank" href="https://www.instagram.com/f1j1/?hl=en" className={styles.name}>
+              <Image width={161} height={58} src="/assets/artists/fiji-name.png" alt="Fiji " />
+            </a>
           </div>
           <div className={styles.maoli}>
             <Image
@@ -68,13 +62,12 @@ export default function HeroSection() {
               src="/assets/artists/maoli.png"
               alt="Artists"
             />
-            <Image
-              className={styles.name}
-              width={210}
-              height={78}
-              src="/assets/artists/maoli-name.png"
-              alt="Maoli "
-            />
+            <a
+              target="_blank"
+              href="https://www.instagram.com/maolimusic/?hl=en"
+              className={styles.name}>
+              <Image width={210} height={78} src="/assets/artists/maoli-name.png" alt="Maoli " />
+            </a>
           </div>
         </div>
         <div className={styles.dates}>

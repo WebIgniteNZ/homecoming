@@ -9,13 +9,17 @@ export default function Contacts() {
         <p className="text-black xl:text-40 self-center mx-auto">contact us</p>
         <div className="flex flex-col items-center gap-2 p-5 xl:p-10 font-arial text-black bg-black/5">
           <p className="uppercase arial-black font-black">MEdia & Sponsorship</p>
-          <a className="font-bold" href="mailto:bula@homecomingfiji.com">
+          <a
+            className="font-bold transition-all hover:text-pink"
+            href="mailto:bula@homecomingfiji.com">
             bula@homecomingfiji.com
           </a>
         </div>
         <div className="flex flex-col items-center gap-2 p-5 xl:p-10 font-arial text-black bg-black/5">
           <p className="uppercase arial-black font-black">General ENQUIRIES</p>
-          <a className="font-bold" href="mailto:support@homecomingfiji.com">
+          <a
+            className="font-bold transition-all hover:text-pink"
+            href="mailto:support@homecomingfiji.com">
             support@homecomingfiji.com
           </a>
         </div>
