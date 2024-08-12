@@ -121,17 +121,17 @@ const tickets = [
       {
         title: "2-day deal",
         price: "$139 + booking fees",
-        subtitle: "(Available from August 12 to August 19)",
+        subtitle: "(Available from August 12 until sold out)",
       },
       {
         title: "2-day Pass",
         price: "$158 + booking fees",
-        subtitle: "(Available from August 19 to the event date)",
+        subtitle: "(Available from August 19  until sold out",
       },
       {
         title: "1-day pass",
         price: "$79 + booking fees",
-        subtitle: "(Available from August 19 to the event date)",
+        subtitle: "(Available from August 19  until sold out)",
       },
     ],
     note: "Access to Alcohol-Free Zones only (Site map to be released on August 24th).",
