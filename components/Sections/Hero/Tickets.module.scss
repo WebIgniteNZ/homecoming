@@ -50,17 +50,15 @@
       font-size: clamp(12px, 2vw, 18px);
     }
     ul {
+      @apply flex flex-col gap-2;
       li {
-        @apply flex gap-4 items-center py-1.5 lg:py-3  2xl:py-5 text-sm lg:text-base;
+        @apply flex gap-4 items-center py-1 text-sm lg:text-base text-black/75;
         p {
           @apply leading-tight;
         }
         svg {
           @apply text-pink;
           flex-shrink: 0;
-        }
-        &:not(:last-child) {
-          @apply border-b-2 border-b-black/10;
         }
       }
     }
