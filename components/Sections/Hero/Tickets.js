@@ -5,6 +5,23 @@ const tickets = [
     id: "ga",
     title: "GENERAL ADMISSION",
     price: 99,
+    prices: [
+      {
+        title: "2-day deal",
+        price: "$179 + booking fees",
+        subtitle: "(Available from August 12 to August 19)",
+      },
+      {
+        title: "2-day Pass",
+        price: "$188 + booking fees",
+        subtitle: "(Available from August 19 to the event date)",
+      },
+      {
+        title: "1-day pass",
+        price: "$99 + booking fees",
+        subtitle: "(Available from August 12 to the event date)",
+      },
+    ],
     inclusives: [
       <p key="1">
         Entry into <b>HOME COMING</b>, via the <b>&apos;GA&apos; </b>Entry Lanes.
@@ -27,6 +44,18 @@ const tickets = [
     id: "vip",
     title: "VIP",
     price: 350,
+    prices: [
+      {
+        title: "2-day Pass",
+        price: "$350 + booking fees",
+        subtitle: "(Available now until the event date)",
+      },
+      {
+        title: "1-day pass",
+        price: "$200 + booking fees",
+        subtitle: "(Available now until the event date)",
+      },
+    ],
     inclusives: [
       <p key="1">
         Front of stage viewing from our limited <b>&apos;VIP&apos;</b> Section.
@@ -51,6 +80,14 @@ const tickets = [
     id: "vvip",
     title: "VVIP (R18 EXCLUSIVE) ",
     price: 999,
+    prices: [
+      {
+        title: "2-day Pass",
+        price: "$999 + booking fees",
+        subtitle: "(Available now until the event date)",
+        note: "Note: VVIP is R21 only and includes a limited edition collectible VVIP lanyard accreditation.",
+      },
+    ],
     inclusives: [
       <p key="1">
         Priority entry into <b>HOME COMING</b> 2024, via your own dedicated Entry Lanes.
@@ -80,6 +117,24 @@ const tickets = [
     id: "under",
     title: "UNDER 14",
     price: 79,
+    prices: [
+      {
+        title: "2-day deal",
+        price: "$139 + booking fees",
+        subtitle: "(Available from August 12 to August 19)",
+      },
+      {
+        title: "2-day Pass",
+        price: "$158 + booking fees",
+        subtitle: "(Available from August 19 to the event date)",
+      },
+      {
+        title: "1-day pass",
+        price: "$79 + booking fees",
+        subtitle: "(Available from August 19 to the event date)",
+      },
+    ],
+    note: "Access to Alcohol-Free Zones only (Site map to be released on August 24th).",
     inclusives: [
       <p key="1">
         Access to the <b>&apos;VIP&apos;</b> & <b>&apos;GA&apos;</b> area&apos;s food vendors and
@@ -102,8 +157,19 @@ export default function Tickets() {
           {tickets.map((ticket) => (
             <div key={ticket.id} className={`${styles.ticket} ${styles?.[ticket.id]}`}>
               <h5>{ticket.title}</h5>
-              <div className={styles.price}>${ticket.price}</div>
-              <div className="px-5 xl:px-7 2xl:px-10 flex flex-col gap-5 lg:gap-12 flex-grow">
+              {ticket.prices.map((item, i) => (
+                <div key={i} className="px-3 xl:px-5 2xl:px-7 mb-4 xl:mb-6">
+                  <div className="flex flex-col gap-3 items-center w-full border-2 border-pink text-center py-3">
+                    <p className={styles.title}>{item.title}</p>
+                    <div className={styles.price}>{item.price}</div>
+                    <p className={styles.subtitle}>{item.subtitle}</p>
+                    {item?.note && <p className={styles.subtitle}>{item.note}</p>}
+                  </div>
+                </div>
+              ))}
+
+              <div className="px-3 xl:px-5 2xl:px-7 flex flex-col gap-5 lg:gap-12 flex-grow">
+                {ticket?.note && <div className={styles.note}>{ticket.note}</div>}
                 <ul>
                   {ticket.inclusives.map((inc, i) => (
                     <li key={i}>

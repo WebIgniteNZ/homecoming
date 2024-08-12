@@ -18,16 +18,26 @@
     border-radius: 10px;
     scroll-snap-align: center;
     width: 76vw;
-    max-width: 375px;
+    max-width: 346px;
     flex-shrink: 0;
-    &.vvip {
+    .title {
+      font-family: "Arial Black", sans-serif;
+      @apply uppercase font-black w-10/12 mx-auto;
+    }
+    .subtitle {
+      @apply text-xs xl:text-sm text-black/75 leading-none w-10/12 mx-auto text-balance;
+    }
+    .note {
+      @apply bg-black/5 p-2 lg:p-4 text-balance text-center text-xs xl:text-sm;
+    }
+    &.ga {
       width: 77vw;
       max-width: 510px;
     }
-    &.under {
-      width: 56vw;
-      max-width: 300px;
-    }
+    // &.under {
+    //   width: 56vw;
+    //   max-width: 300px;
+    // }
     h5 {
       @apply pb-3 xl:pb-6;
       font-family: "Arial Black", sans-serif;
@@ -36,8 +46,8 @@
       font-weight: 900;
     }
     .price {
-      @apply flex justify-center items-center font-germania bg-pink text-white leading-none pt-4 py-3  xl:pt-7 xl:py-6;
-      font-size: clamp(28px, 3vw, 40px);
+      @apply flex justify-center items-center font-germania bg-pink text-white leading-none pt-1.5 py-1  xl:pt-4 xl:py-3 w-full;
+      font-size: clamp(12px, 2vw, 18px);
     }
     ul {
       li {
@@ -67,15 +77,15 @@
       width: 100%;
       flex: 1 1 calc(25% - 40px);
 
-      &.vvip {
+      &.ga {
         flex: 1 1 calc(30% - 40px);
-        max-width: unset;
+        max-width: 510px;
       }
-      &.under {
-        min-width: 270px;
-        flex: 1 1 calc(17% - 40px);
-        max-width: unset;
-      }
+      // &.under {
+      //   min-width: 270px;
+      //   flex: 1 1 calc(17% - 40px);
+      //   max-width: unset;
+      // }
     }
   }
 }
