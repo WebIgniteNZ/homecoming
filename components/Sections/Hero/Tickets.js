@@ -136,10 +136,7 @@ const tickets = [
     ],
     note: "Access to Alcohol-Free Zones only (Site map to be released on August 24th).",
     inclusives: [
-      <p key="1">
-        Access to the <b>&apos;VIP&apos;</b> & <b>&apos;GA&apos;</b> area&apos;s food vendors and
-        toilets.
-      </p>,
+      <p key="1">Access to Non Alcoholic Bars, Food Vendors and U14 Toilets</p>,
       <p key="2">Access to water refill stations.</p>,
       <p key="3">Access to merchandise vendors.</p>,
     ],
