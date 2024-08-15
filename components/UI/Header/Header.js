@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import PreRegButton from "../../PreRegButton";
-// import Socials from "../../Socials";
+
 import MobileLinks from "../MobileLinks";
 import styles from "./Header.module.scss";
 import LinksPart from "./LinksPart";
@@ -31,11 +31,8 @@ export default function Header() {
           <ul className="hidden  gap-2 lg:gap-5 2xl:gap-14 font-bold hover:*:text-pink  lg:flex uppercase  justify-between ">
             <LinksPart desktop />
           </ul>
-          {/* <div className="w-[10vw] h-auto hidden lg:flex justify-center absolute left-1/2 bottom-0 -translate-x-1/2">
-            <Image width={228} height={80} src="/assets/logo-small.png" alt="Juicy Fest Logo" />
-          </div> */}
+
           <div className="lg:flex gap-2 lg:gap-5 xl:gap-10  items-center hidden">
-            {/* <Socials /> */}
             {showBuyTickets && <PreRegButton />}
           </div>
         </div>
@@ -49,20 +46,6 @@ export default function Header() {
               setOpen(false);
             }}
           />
-          {/* {dayX < today ? (
-            <Link
-              href={"/buy-tickets"}
-              className="w-max p-4 rounded-md bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white">
-              Buy Tickets
-            </Link>
-          ) : (
-            <a
-              href={"https://arep.co/p/juicyfest-2024-1"}
-              className="w-max p-4 rounded-md bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white">
-              pre-reg
-            </a>
-          )} */}
-          {/* <Socials /> */}
         </div>
       </div>
     </nav>

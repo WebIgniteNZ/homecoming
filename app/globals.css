@@ -10,26 +10,10 @@
   src: local("Name Smile"), url("/Name-Smile.otf") format("opentype");
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap'); */
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: white;
   background: #0b0b0b;
   font-family: "Name Smile", system-ui;
   position: relative;
@@ -57,71 +41,9 @@ html {
   }
 }
 
-.font-impact {
-  font-family: "Impact", sans-serif;
-}
 
 .arial-black {
   font-family: 'Arial-black', sans-serif;
-}
-
-.timer-box {
-  background: #ff0072;
-  box-shadow: -10px 10px 0px #00f2ff;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  color: #ffdd00;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #ffdd00;
-  transition: background-color 5000s ease-in-out 0s;
-  box-shadow: inset 0 0 200px 200px rgba(0, 0, 0, 0.405);
-  background-color: #000
-}
-
-.class-box {
-  @apply leading-none uppercase font-black;
-
-  box-shadow: -7px 7px 0px #7200ff;
-}
-
-.class {
-  @apply leading-none uppercase font-black;
-  font-size: 5rem;
-  color: #ff0072;
-  text-shadow: -4px 4px 0px #00f2ff;
-}
-
-.arep-form {
-  width: 100%;
-  max-width: 600px;
-}
-
-.arep-input {
-  display: block;
-  width: 100%;
-}
-
-.arep-form-field-wrapper {
-  margin-bottom: 12px;
-}
-
-.arep-mobileNumber-input-wrap .arep-mobileNumber-code-input {
-  display: inline-block;
-  width: 100px;
-  margin-right: 6px;
-}
-
-.arep-mobileNumber-input-wrap .arep-mobileNumber-number-input {
-  display: inline-block;
-  width: calc(100% - 100px - 6px);
-}
-
-.win-text-shadow {
-  text-shadow: -2px 2px 0 black;
 }
 
 .gradient-bg {
@@ -149,8 +71,6 @@ input:-webkit-autofill:active {
   max-width: 786px;
   width: 100%;
   padding-bottom: 55%;
-
-
 }
 
 .poster>div {
