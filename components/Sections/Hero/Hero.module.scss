@@ -23,7 +23,25 @@
 .flag {
   @apply absolute left-1/2  top-0 h-auto z-0;
   width: 28%;
-  transform: translateX(-60%) translateY(10%);
+  transform: translateX(-60%) translateY(0%);
+}
+.name {
+  @apply w-auto h-auto   z-10 transition-all  flex;
+  &:hover {
+    scale: 1.1;
+  }
+  &.fiji {
+    width: 20%;
+  }
+  &.jboog {
+    width: 30%;
+  }
+  &.josh {
+    width: 25%;
+  }
+  &.maoli {
+    width: 20%;
+  }
 }
 .artists {
   @apply flex w-full;
@@ -32,62 +50,51 @@
     display: flex;
     justify-content: center;
   }
-  .name {
-    @apply absolute w-2/3 h-auto top-full left-1/2 -translate-x-1/2 -translate-y-1/2  z-10 transition-all;
-    &:hover {
-      scale: 1.1;
-    }
-  }
+
   .artistImg {
     @apply w-full h-auto;
     max-width: unset;
     width: 150%;
     object-fit: contain;
   }
-  .josh {
+  .fiji {
+    width: 100%;
     position: relative;
     z-index: 0;
     .artistImg {
-      transform: translateX(12%);
-    }
-    .name {
-      width: 70%;
-      transform: translateX(-30%) translateY(-100%);
+      transform: translateX(17%);
     }
   }
   .jboog {
+    width: 100%;
     position: relative;
     z-index: 1;
     .artistImg {
-      width: 140%;
+      width: 150%;
       transform: translateX(5%);
     }
-    .name {
-      width: 75%;
-      transform: translateX(-45%) translateY(-100%);
-    }
   }
-  .fiji {
+  .josh {
+    width: 100%;
     position: relative;
     z-index: 0;
     .artistImg {
-      transform: translateX(-5%);
-    }
-    .name {
-      width: 57%;
-      transform: translateX(-56%) translateY(-130%);
+      width: 150%;
+      transform: translateX(-3%);
     }
   }
   .maoli {
+    width: 100%;
     position: relative;
     z-index: 3;
     .artistImg {
+      width: 140%;
       transform: translateX(-15%);
     }
-    .name {
-      width: 60%;
-      transform: translateX(-85%) translateY(-122%);
-    }
+  }
+  .name {
+    width: 60%;
+    transform: translateX(-85%) translateY(-122%);
   }
 }
 .heroMob {
@@ -103,12 +110,11 @@
 @media (min-width: 1280px) {
   .section {
     height: max-content;
-    max-height: 800px;
   }
 }
 @media (min-width: 1440px) {
-  .section {
-    height: 80vh;
-    max-height: 800px;
+  .hero {
+    max-width: 1480px;
+    padding-top: 6%;
   }
 }
