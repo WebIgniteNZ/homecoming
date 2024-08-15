@@ -123,15 +123,29 @@ export default function HeroSection() {
         />{" "}
         <Image
           style={{ position: "relative", transform: "translateY(-20%)", zIndex: 2 }}
+          className={styles.title}
+          width={427}
+          height={182}
+          src="/assets/hero/title.png"
+          alt="HOMECOMING FEST "
+        />
+        <Image
+          style={{
+            position: "relative",
+            margin: "0 auto",
+            transform: "translateY(-10%)",
+            zIndex: 2,
+          }}
           className={styles.venueMob}
-          width={557}
-          height={562}
+          width={300}
+          height={180}
+          quality={100}
           src="/assets/text-mob.png"
           alt="14-15 September,King Charles Park "
         />
-        <p className="text-mustard text-center text-[clamp(24px,7vw,40px)] absolute top-[90%] left-1/2 -translate-x-1/2 z-10">
+        {/* <p className="text-mustard text-center text-[clamp(24px,7vw,40px)] absolute top-[90%] left-1/2 -translate-x-1/2 z-10">
           2024
-        </p>
+        </p> */}
         <Image
           className="pointer-events-none object-cover  opacity-100  z-[-1] absolute w-full h-full md:hidden "
           sizes="100vw"
