@@ -181,7 +181,7 @@ export default function Tickets() {
         </div>
       </div>
       <div className="w-[calc(100%-40px)] lg:w-full bg-pink pt-9 pb-8 px-5 rounded-[10px] text-white font-germania lg:text-xl text-center ">
-        GROUP PACKAGE OPTIONS AVAILABLE BUY 6 TICKETS GET 1 FREE
+        Group package option available - Buy 6 tickets for the price of 5
       </div>
     </div>
   );
