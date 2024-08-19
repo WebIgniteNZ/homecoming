@@ -1,3 +1,4 @@
+import { openBuyModal } from "../../../utils/customEvents";
 import { StarIcon } from "../../UI/icons";
 import styles from "./Tickets.module.scss";
 const tickets = [
@@ -174,7 +175,11 @@ export default function Tickets() {
                     </li>
                   ))}
                 </ul>
-                {showBuyTickets && <a href={ticket.link}>buy tickets</a>}
+                {
+                  <a className="cursor-pointer" onClick={openBuyModal}>
+                    buy tickets
+                  </a>
+                }
               </div>
             </div>
           ))}

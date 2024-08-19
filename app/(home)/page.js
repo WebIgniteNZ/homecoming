@@ -5,6 +5,8 @@ import Contacts from "../../components/Sections/Contacts";
 import HeroSection from "../../components/Sections/Hero/HeroSection";
 import Tickets from "../../components/Sections/Hero/Tickets";
 import ToPeople from "../../components/Sections/ToPeople";
+import TicketsModal from "../../components/UI/TicketsModal";
+import { openBuyModal } from "../../utils/customEvents";
 
 export default function Page() {
   return (
@@ -27,8 +29,8 @@ export default function Page() {
 
           <div className="w-2/3 h-0.5 md:h-14 md:w-0.5 flex-shrink-0 max-md:my-5 md:mx-10 bg-white/50"></div>
           <a
-            href={process.env.NEXT_PUBLIC_LINK}
-            className={` p-4  bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white`}>
+            onClick={openBuyModal}
+            className={`cursor-pointer p-4  bg-pink leading-none font-bold text-white uppercase transition-all hover:text-pink hover:bg-white`}>
             Buy Tickets
           </a>
         </div>
@@ -55,6 +57,7 @@ export default function Page() {
           src={"/assets/bg-min.jpg"}
           alt="pattern"
         />
+        <TicketsModal />
       </div>
     </>
   );

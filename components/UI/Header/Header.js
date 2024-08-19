@@ -28,7 +28,7 @@ export default function Header() {
             <div className={styles["line-middle"]}></div>
             <div className={styles["line-bottom"]}></div>
           </button>
-          <ul className="hidden  gap-2 lg:gap-5 2xl:gap-14 font-bold hover:*:text-pink  lg:flex uppercase  justify-between ">
+          <ul className="hidden  gap-2 lg:gap-14 2xl:gap-14 font-bold hover:*:text-pink  lg:flex uppercase  justify-between ">
             <LinksPart desktop />
           </ul>
 
