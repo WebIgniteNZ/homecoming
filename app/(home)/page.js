@@ -34,6 +34,10 @@ export default function Page() {
             Buy Tickets
           </a>
         </div>
+        <p className="wrapper text-balance text-center pt-10  text-mustard max-lg:text-xs mx-auto">
+          ONLY SINGLE DAY PASSES WILL BE AVAILABLE FOR PURCHASE AT THE GATE. THESE PASSES WILL NO
+          LONGER BE ON SALE ONLINE FROM SATURDAY MORNING, AND CAN ONLY BE PURCHASED AT THE GATE.
+        </p>
         <ToPeople />
 
         <Image
